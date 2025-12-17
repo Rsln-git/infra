@@ -30,6 +30,15 @@ spec:
     server: https://kubernetes.default.svc
     namespace: demo
 
+  ignoreDifferences:
+    - kind: Secret
+      name: demo-nginx-tls
+      namespace: demo
+      jsonPointers:
+        - /data
+        - /stringData
+        - /metadata/annotations
+
   syncPolicy:
     automated:
       prune: true
