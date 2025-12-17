@@ -2,6 +2,3 @@ replicaCount: 2
 
 service:
   type: ClusterIP
-
-containerPorts:
-  http: 9999
